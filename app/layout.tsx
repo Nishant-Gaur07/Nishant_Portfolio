@@ -11,7 +11,7 @@ import HeaderBackground from '@/components/main/HeaderBackground';
 
 export const metadata: Metadata = {
   title: 'Nishant Gaur Portfolio',
-  description: "Nishant Gaur's portfolio website - Technology Enthusiast specializing in Cloud Platforms and Backend Development",
+  description: "Nishant Gaur's portfolio website - Technology Enthusiast specializing in Cloud Platforms and Web Development",
 };
 
 export default function RootLayout({

@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { FaGithub, FaLinkedinIn, FaEnvelope, FaCode } from 'react-icons/fa';
 import { TextGenerateEffect } from '../ui/TextGenerateEffect';
@@ -34,6 +34,7 @@ const Hero = () => {
       className="flex items-center h-auto md:min-h-[70vh] lg:min-h-[80vh] py-2 px-2 mt-12 text-white"
     >
       <div className="container mx-auto flex flex-wrap items-center">
+        {/* Left Content */}
         <motion.div
           initial="hidden"
           animate="visible"
@@ -60,7 +61,7 @@ const Hero = () => {
           </h2>
           <h4 className="md:text-xl text-base font-medium text-gray-400 mt-1 mb-[-6px] italic flex ">
             <Image
-              src="/india.png"
+              src="/location.png"
               alt="India Flag"
               width={24}
               height={24}
@@ -70,14 +71,20 @@ const Hero = () => {
           </h4>
 
           <TextGenerateEffect
-            words="I'm a passionate and detail-oriented technology enthusiast with hands-on practice in Cloud Platforms and backend development. Currently pursuing Bachelor of Technology in Information Technology at NIET with CGPA 7.38. I specialize in Java, Python, React.js, AWS, Azure, and Spring Boot."
+            words="I'm a passionate and detail-oriented technology enthusiast with hands-on practice in Cloud Platforms and Web Development. Currently pursuing Bachelor of Technology in Information Technology at NIET, Greater Noida with CGPA 7.51. I specialize in Java, React.js, AWS, Azure, and SQL. Eager to contribute my skills and grow in a dynamic tech environment."
           />
+
+          {/* Toggle Button + Social Links */}
           <div className="flex flex-col md:flex-row items-center mt-2 z-20">
             <button
-              className=" md:inline-block sm:px-8 sm:py-2 px-4 py-2 sm:text-sm md:text-base lg:text-lg text-sm rounded-xl transition-colors button-3d-primary"
+              className={`md:inline-block sm:px-8 sm:py-2 px-4 py-2 sm:text-sm md:text-base lg:text-lg text-sm rounded-xl transition-colors ${
+                showStars
+                  ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg'
+                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+              }`}
               onClick={() => setShowStars(!showStars)}
             >
-              Disable Background Stars
+              {showStars ? 'Disable Background Stars' : 'Enable Background Stars'}
             </button>
             <div className="flex gap-4 md:gap-6 justify-center md:justify-end items-center mt-6 md:mt-0 md:ml-6">
               {socialLinks.map((link) => (
@@ -95,6 +102,7 @@ const Hero = () => {
           </div>
         </motion.div>
 
+        {/* Right Content */}
         <motion.div
           initial="hidden"
           animate="visible"
@@ -105,7 +113,7 @@ const Hero = () => {
             <Image
               src="/nishant-profile.jpg"
               alt="Nishant Image"
-              className="object-cover object-bottom filter grayscale contrast-65 opacity-90"
+              className="object-cover object-bottom rounded-3xl transition-transform duration-500 hover:scale-105"
               priority
               fill
               quality={80}
@@ -116,7 +124,22 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-      <StarsCanvas show={showStars} />
+
+      {/* Stars Background with fade animation */}
+      <AnimatePresence>
+        {showStars && (
+          <motion.div
+            key="stars"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
+            className="absolute inset-0"
+          >
+            <StarsCanvas show={showStars} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
