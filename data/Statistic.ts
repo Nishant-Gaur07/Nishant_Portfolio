@@ -23,7 +23,7 @@ export const statisticsData = [
   {
     id: 4,
     icon: '/certificate.png',
-    number: 2,
+    number: 12,
     description: 'Certifications',
   },
 ];

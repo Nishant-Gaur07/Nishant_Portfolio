@@ -15,9 +15,9 @@ const Projects = () => {
   });
 
   const projectsCategories = [
-    ProjectCategories.WebApplication,
-    ProjectCategories.DesktopApplication,
     ProjectCategories.DevOps,
+    ProjectCategories.WebApplication,
+    ProjectCategories.Database,
   ];
 
   const filterProjectsByCategory = useMemo(() => {
@@ -39,7 +39,7 @@ const Projects = () => {
         Icon={<GlobeAltIcon />}
       />
 
-      <Tabs defaultValue={ProjectCategories.DevOps}>
+      <Tabs defaultValue={ProjectCategories.WebApplication}>
         <div className="flex justify-center">
           <TabsList className="inline-flex mb-4 mt-[-24px]">
             {projectsCategories.map((category: ProjectCategories) => (

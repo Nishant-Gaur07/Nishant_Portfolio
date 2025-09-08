@@ -1,32 +1,32 @@
 export const ServicesData = [
   {
-    id: 1,
-    name: 'Cloud Platform Development',
-    description:
-      'I develop cloud-based applications using AWS (EC2, S3, IAM) and Azure services. Experience with cloud storage, virtual machines, and auto-scaling solutions.',
-    icon: '/check.svg',
-  },
-  {
-    id: 2,
-    name: 'Backend Development',
-    description:
-      'I build robust backend systems using Node.js, Spring Boot, and REST APIs. Experience with JWT authentication, database management, and handling concurrent users.',
-    icon: '/check.svg',
-  },
-  {
-    id: 3,
-    name: 'Machine Learning Integration',
-    description:
-      'I develop ML-enhanced applications with Python, creating prediction systems and integrating machine learning models with web applications.',
-    icon: '/check.svg',
-  },
+  id: 1,
+  name: 'Cloud & DevOps Development',
+  description:
+    'I design and deploy applications on AWS using EC2, S3, IAM, and CI/CD pipelines with Jenkins, Docker, and SonarQube. Experienced in automation, monitoring, and secure deployments.',
+  icon: '/check.svg',
+},
+{
+  id: 2,
+  name: 'Web Development',
+  description:
+    'I build scalable web applications using Java, Python, React.js, and REST APIs. Skilled in authentication, MySQL/MongoDB databases, and version control with Git/GitHub.',
+  icon: '/check.svg',
+},
+{
+  id: 3,
+  name: 'Database Design & Management',
+  description:
+    'I design and optimize relational and NoSQL databases using MySQL Workbench and MongoDB. Skilled in schema design, complex queries, and database-driven application development.',
+  icon: '/check.svg',
+},
 ];
 
 export const ServicesApps = [
   {
     id: 1,
     title: 'AWS',
-    icon: '/logo/aws.svg',
+    icon: '/logo/aws.png',
     width: 40,
     height: 40,
   },
