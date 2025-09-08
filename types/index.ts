@@ -1,7 +1,7 @@
 export enum ProjectCategories {
-  WebApplication = 'Web Application',
-  DesktopApplication = 'Desktop Application',
   DevOps = 'DevOps',
+  WebApplication = 'Web Application',
+  Database = 'Database',
 }
 
 export enum MilestoneTypes {

@@ -39,7 +39,7 @@ const Projects = () => {
         Icon={<GlobeAltIcon />}
       />
 
-      <Tabs defaultValue={ProjectCategories.WebApplication}>
+      <Tabs defaultValue={ProjectCategories.DevOps}>
         <div className="flex justify-center">
           <TabsList className="inline-flex mb-4 mt-[-24px]">
             {projectsCategories.map((category: ProjectCategories) => (
