@@ -11,7 +11,7 @@ export const SkillsData = [
   {
     id: 2,
     skillName: 'Python',
-    image: '/logo/python.svg',
+    image: '/logo/pythonn.png',
     width: 70,
     height: 70,
     skillLevel: 4,
@@ -99,7 +99,7 @@ export const SkillsData = [
   {
     id: 12,
     skillName: 'Azure',
-    image: '/logo/azure.svg',
+    image: '/logo/azuree.png',
     width: 70,
     height: 70,
     skillLevel: 3,

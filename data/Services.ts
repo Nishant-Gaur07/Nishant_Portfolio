@@ -33,14 +33,14 @@ export const ServicesApps = [
   {
     id: 2,
     title: 'Azure',
-    icon: '/logo/azure.svg',
+    icon: '/logo/azuree.png',
     width: 35,
     height: 40,
   },
   {
     id: 3,
     title: 'Python',
-    icon: '/logo/python.svg',
+    icon: '/logo/pythonn.png',
     width: 40,
     height: 40,
   },
