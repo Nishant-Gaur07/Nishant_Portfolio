@@ -19,7 +19,7 @@ export const Certification = () => {
       animate={inView ? 'visible' : 'hidden'}
     >
       <SectionHeader
-        title="Qualifications"
+        title="Certifications"
         subtitle="Certifications and Awards I Have Earned"
         Icon={<AcademicCapIcon />}
       />
